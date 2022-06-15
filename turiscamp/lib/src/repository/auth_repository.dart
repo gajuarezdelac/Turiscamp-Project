@@ -1,4 +1,5 @@
 import 'package:turiscamp/src/models/params/user_register_params.dart';
+import 'package:turiscamp/src/models/response/http_response.dart';
 import 'package:turiscamp/src/services/auth_service.dart';
 
 class AuthRepository {
@@ -9,4 +10,7 @@ class AuthRepository {
 
   Future<String> register({required UserRegisterParams params}) =>
       service.register(params);
+
+  Future<HttpResponse> recoveryPassword({required String username}) =>
+      service.recoveryPassword(username);
 }

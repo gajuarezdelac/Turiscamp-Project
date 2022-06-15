@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turiscamp/src/utils/constants.dart';
 import 'package:turiscamp/src/widgets/header_widget.dart';
 import 'package:turiscamp/src/widgets/theme_helper.dart';
 
@@ -24,6 +25,16 @@ class _FaqPageState extends State<FaqPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          "City Page",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+        elevation: 0.0,
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Constants.blueGeneric,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
